@@ -11,6 +11,7 @@ public class Main {
             try{
                 System.out.println("Enter (1) to add a book, (2) to look up a book: or -1 to exit: ");
                 choice = input.nextInt();
+                input.nextLine();
         
                 switch(choice)
                 {
@@ -45,11 +46,12 @@ public class Main {
         try
         {
             System.out.println("Please enter the title of the book:");
-                titleOfBook = input.next();
+                titleOfBook = input.nextLine();
                 System.out.println("Please enter the genre of the book:");
-                genreOfBook = input.next();
+                genreOfBook = input.nextLine();
                 System.out.println("Please enter the number of pages in the book:");
                 numberOfPages = input.nextInt();
+                input.nextLine();
 
                 Book bk = new Book(titleOfBook, genreOfBook, numberOfPages);
                 lb.add(titleOfBook, bk);
@@ -65,7 +67,7 @@ public class Main {
     {
         String titleOfBook;
         System.out.print("Please enter the title of the book: ");
-        titleOfBook = input.next();
+        titleOfBook = input.nextLine();
 
         if(lb.libraryBooks.containsKey(titleOfBook))
         {
